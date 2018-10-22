@@ -1,0 +1,21 @@
+package com.example.annac.login
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        login_btn.setOnClickListener {
+            var statues =
+                if (username_et.text.toString().equals("Sample") && password_et.text.toString().equals("password")) "Logged in"
+                else
+                    "Login fail"
+        }
+    }
+}
