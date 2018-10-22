@@ -1,0 +1,49 @@
+//custom node class that stores the users info for their account
+//allows for setting and retrieving of the next node, as well as the ability to get the 
+//data for each part of the node
+public class AccountNode 
+{
+	private String accUrl; //the Url for the account
+	private String accUsername; //the username for the account
+	private String accPassword; //the 
+	private AccountNode	next;//next node in the linked list
+	
+	//takes 3 strings for account url, account username, and account password and
+	// constructs an AccountNode
+	public AccountNode(String theaccUrl, String theaccUsername, String theaccPassword)
+	{
+		accUrl = theaccUrl;
+		accUsername = theaccUsername;
+		accPassword = theaccPassword;
+	}
+		
+	//gets the next node in the linked list
+	AccountNode getNext()
+	{
+		return next;
+	}
+		
+	//sets the next node in the linked list
+	void setNext(AccountNode next)
+	{
+		this.next = next;
+	}
+		
+	//gets the data of the account url
+	String getAccUrl()
+	{
+		return accUrl;
+	}
+	
+	//gets the data of the account username
+	String getAccUsername()
+	{
+		return accUsername;
+	}	
+	
+	//gets the data of the account password
+	String getAccPassword()
+	{
+		return accPassword;
+	}
+}
