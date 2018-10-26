@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".AddActivity">
+
+    <EditText
+            android:id="@+id/accountName"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="129dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName" />
+
+    <EditText
+            android:id="@+id/accountEmail"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="53dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+    <EditText
+            android:id="@+id/accountPassword"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="110dp"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+    <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="17dp"
+            android:text="Account Name"
+            android:textSize="18sp" />
+
+    <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/accountEmail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="-3dp"
+            android:text="Email"
+            android:textSize="18sp" />
+
+    <TextView
+            android:id="@+id/textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/accountPassword"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="19dp"
+            android:text="Password"
+            android:textSize="18sp" />
+
+    <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="148dp"
+            android:text="Save" />
+</RelativeLayout>
