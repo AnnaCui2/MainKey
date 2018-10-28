@@ -24,8 +24,15 @@ class MainActivity : AppCompatActivity() {
         //Sends to user to home screen on button press
         val loginbtn : Button = findViewById(R.id.login_btn)
         loginbtn.setOnClickListener{
-            val intent = Intent(this,Home :: class.java)
-            startActivity(intent)
+            val intent_login = Intent(this,Home :: class.java)
+            startActivity(intent_login)
+        }
+
+        //Takes user to registration page
+        val registerbtn : Button = findViewById(R.id.register_btn)
+        registerbtn.setOnClickListener {
+            val intent_register = Intent(this,RegistrationPage :: class.java)
+            startActivity(intent_register)
         }
     }
 }

@@ -23,6 +23,8 @@
                 android:label="@string/title_activity_add"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".RegistrationPage">
+        </activity>
     </application>
 
 </manifest>
