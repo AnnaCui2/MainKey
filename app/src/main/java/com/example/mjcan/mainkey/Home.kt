@@ -25,6 +25,13 @@ class Home : AppCompatActivity() {
         accountsList.adapter = adapter
 
         //Sends user to add entry screen on button press
+        val logoutbtn : Button = findViewById(R.id.logoutbtn)
+        logoutbtn.setOnClickListener {
+            val intent = Intent(this, MainActivity :: class.java)
+            startActivity(intent)
+        }
+
+        //Sends user to add entry screen on button press
         val addbtn : Button = findViewById(R.id.addbtn)
         addbtn.setOnClickListener {
             val intent = Intent(this, AddActivity :: class.java)

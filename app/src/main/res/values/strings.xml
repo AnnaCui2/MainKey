@@ -9,4 +9,6 @@
     <string name="email">Email</string>
     <string name="save">Save</string>
     <string name="account_name">Account Name</string>
+    <string name="logout">Logout</string>
+    <string name="add_entry">Add Entry</string>
 </resources>
