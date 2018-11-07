@@ -5,6 +5,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
+
+/*
+    Page where the user creates an Admin account,
+    to login into the app and have access to the added accounts
+ */
+
 class RegistrationPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

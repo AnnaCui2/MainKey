@@ -7,10 +7,19 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 
+
+/*
+    App home page, all the accounts are visible
+    It has the option to logout or to add another account to store
+ */
+
+
 //Example list entries to show functionality
 val items = arrayOf("Facebook", "Snapchat", "Instagram", "reddit", "Yahoo", "Spotify",
     "Discord", "Twitch", "Chegg", "PayPal", "Steam", "Apple", "Netflix",
     "Bank", "Canvas", "Slack")
+
+
 
 class Home : AppCompatActivity() {
 
