@@ -1,5 +1,6 @@
 package com.example.mjcan.mainkey
 
+import android.accounts.Account
 import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -15,11 +16,8 @@ import java.lang.System.exit
     Add new accounts (entries) to be stored by the app
  */
 
-var tempAcc: AccountInfo? = null
-var accName: String? = null
-var accLogin: String? = null
-var accPassword: String? = null
 
+var count: Int = 0
 
 class AddActivity : AppCompatActivity() {
 
@@ -30,14 +28,15 @@ class AddActivity : AppCompatActivity() {
         //Takes user back to home screen
         val savebtn : Button = findViewById(R.id.saveButton)
         savebtn.setOnClickListener {
-            accName = findViewById<EditText>(R.id.accountName).toString()
-            accLogin = findViewById<EditText>(R.id.accountEmail).toString()
-            accPassword = findViewById<EditText>(R.id.accountPassword).toString()
 
+            var accName = findViewById<EditText>(R.id.accountName).getText().toString()
+            var accLogin = findViewById<EditText>(R.id.accountEmail).getText().toString()
+            var accPassword = findViewById<EditText>(R.id.accountPassword).getText().toString()
+            val newItem = AccountInfo(accName, accLogin, accPassword, count)
 
-            tempAcc?.initNode(accName!!, accLogin!!, accPassword!!)
+            Toast.makeText( applicationContext, "count" + newItem.ID, Toast.LENGTH_LONG).show()
 
-
+            count += 1
             val intent_home = Intent(this, Home::class.java)
             startActivity(intent_home)
         }

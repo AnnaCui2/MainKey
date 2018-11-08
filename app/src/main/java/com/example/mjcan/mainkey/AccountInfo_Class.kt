@@ -7,18 +7,28 @@ class acc_node {
 }
 
 
-class AccountInfo {
+class AccountInfo(accName: String, accUsername: String, accPass: String, count: Int) {
     /*
     Info for each account entry created by the user
      */
+
+
     var accountName: String? = null
-    var accountLogin: String? = null
+    var accountUsername: String? = null
     var accountPassword: String? = null
+    var ID: Int? = null
+
+
+    init {
+        accountName = accName
+        accountUsername = accUsername
+        accountPassword = accPass
+        ID = count
+    }
 
     /*
     Info to handle the linked list
      */
-    var ID: Int = 0
     private var head: acc_node? = null
     var isEmpty: Boolean = head == null
 
@@ -26,12 +36,6 @@ class AccountInfo {
     /*
     functions
      */
-    fun initNode(accName: String, accLog: String, accPass: String ) {
-        ID++
-        accountName = accName
-        accountLogin = accLog
-        accountPassword = accPass
-    }
     fun firstNode(): acc_node? = null
     fun lastNode(): acc_node? {
         var node = head
