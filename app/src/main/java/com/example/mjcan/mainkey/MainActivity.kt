@@ -6,13 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-/*
-    1st page showned to the user.
-    Option to create a new admin account,
-    Or to login with the already registered Admin info
- */
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
