@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+//import com.example.mjcan.mainkey.R.id.username_et
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,9 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         login_btn.setOnClickListener {
-            var statues =
-                if (username_et.text.toString().equals("Sample") && password_et.text.toString().equals("password")) "Logged in"
-                else
+//            var statues =
+//                if (username_et.text.toString().equals("Sample") && password_et.text.toString().equals("password")) "Logged in"
+//                else
                     "Login fail"
 
 
