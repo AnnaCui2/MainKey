@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Please enter text in email/password", Toast.LENGTH_SHORT).show()
             return
         }
-        
+
         Log.d(TAG,"Email is: " + email)
         Log.d(TAG,"Password:: $password")
         

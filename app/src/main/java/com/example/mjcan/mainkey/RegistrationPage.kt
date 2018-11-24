@@ -10,6 +10,10 @@ import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.auth.User
 import kotlinx.android.synthetic.main.activity_registration_page.input_email
 import kotlinx.android.synthetic.main.activity_registration_page.input_password
 import kotlinx.android.synthetic.main.activity_registration_page.btn_signup
@@ -32,6 +36,8 @@ class RegistrationPage : AppCompatActivity() {
 
         signupbtn.setOnClickListener {
             performRegister()
+            val intent_main = Intent(this, MainActivity::class.java)
+            startActivity(intent_main)
         }
     }
 
@@ -50,19 +56,30 @@ class RegistrationPage : AppCompatActivity() {
         //Firebase Authentication to create a user with email and password
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).
                 addOnCompleteListener{
-                    if (!it.isSuccessful) return@addOnCompleteListener
-
+                    if (!it.isSuccessful) {
+                        return@addOnCompleteListener
+                    }
                     //else if successful
-                    Log.d(TAG, "Successfully created user with uid: ${it.result?.user?.uid}")
+
+                    //Store user in Firebase
+                    var db : FirebaseFirestore = FirebaseFirestore.getInstance()
+                    val uid = FirebaseAuth.getInstance().uid ?: ""
+
+                    val items = HashMap<String, Any>()
+                    items.put("Email", email)
+
+                    db.collection("users").document(uid).set(items)
+                    Log.d(TAG, "Sumjccessfully created user with uid: ${it.result?.user?.uid}")
                 }
                 .addOnFailureListener{
                     Log.d(TAG, "Failed to create user account: ${it.message}")
                     Toast.makeText(this, "Failed to create user: ${it.message}", Toast.LENGTH_SHORT).show()
                 }
 
-        val intent_main = Intent(this, MainActivity::class.java)
-        startActivity(intent_main)
     }
 }
+
+class User(val uid: String, val adminEmail: String)
+
 
 private val TAG = RegistrationPage::class.java.getName()

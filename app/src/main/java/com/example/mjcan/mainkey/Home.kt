@@ -16,10 +16,8 @@ import android.widget.ListView
 
 //Example list entries to show functionality
 val items = arrayOf("Facebook", "Snapchat", "Instagram", "reddit", "Yahoo", "Spotify",
-    "Discord", "Twitch", "Chegg", "PayPal", "Steam", "Apple", "Netflix",
-    "Bank", "Canvas", "Slack")
-
-
+        "Discord", "Twitch", "Chegg", "PayPal", "Steam", "Apple", "Netflix",
+        "Bank", "Canvas", "Slack")
 
 class Home : AppCompatActivity() {
 
@@ -39,7 +37,6 @@ class Home : AppCompatActivity() {
             val intent = Intent(this, MainActivity :: class.java)
             startActivity(intent)
         }
-
         //Sends user to add entry screen on button press
         val addbtn : Button = findViewById(R.id.addbtn)
         addbtn.setOnClickListener {
