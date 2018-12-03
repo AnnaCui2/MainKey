@@ -9,3 +9,17 @@
 /build
 /captures
 .externalNativeBuild
+app/src/main/AndroidManifest.xml
+app/src/main/java/com/example/mjcan/mainkey/AccountInfo_Class.kt
+app/src/main/java/com/example/mjcan/mainkey/Home.kt
+app/src/main/res/values/strings.xml
+app/src/main/res/values/strings.xml
+app/src/main/java/com/example/mjcan/mainkey/Home.kt
+app/src/main/java/com/example/mjcan/mainkey/AccountInfo_Class.kt
+app/src/main/AndroidManifest.xml
+.idea/vcs.xml
+app/src/main/res/values/strings.xml
+app/src/main/java/com/example/mjcan/mainkey/Home.kt
+app/src/main/java/com/example/mjcan/mainkey/AccountInfo_Class.kt
+app/src/main/AndroidManifest.xml
+.idea/vcs.xml
